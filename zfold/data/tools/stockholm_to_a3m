@@ -1,0 +1,13 @@
+#!/bin/env python
+
+import sys
+
+if __name__ == '__main__':
+    if len(sys.argv) != 3:
+        sys.stderr.write('    Stockholm to A3M fast file converter.\n'
+                         '        Usage:\n'
+                         '        $ stockholm_to_a3m inputfile.sto outputfile.a3m\n')
+        exit(1)
+
+    from stockholm_reformat import parse_a3m as parse
+    parse(sys.argv[1], sys.argv[2])

@@ -1,0 +1,151 @@
+# === Data ===
+
+data:
+  # === Base Configurations ===
+  base:
+    # Maximal number of sequences in the multiple sequence alignment
+    msa_depth: 384
+    # Number of top-ranked structural templates for feature extraction
+    tpl_topk: 4
+    # Residue format (choices: 'ca' / 'bb' / 'fa')
+    resd_frmt: fa
+    # Number of random crops - base elements
+    n_crops_base: 1
+    # Number of random crops - 3D coordinates for SE(3)-Fold
+    n_crops_se3f: 16
+    # Size of random crops
+    crop_size: 128
+    # Random noise's maximal standard deviation
+    nois_std_max: 10.0
+    # Random noise's minimal standard deviation
+    nois_std_min: 0.01
+    # Number of random noise's standard deviation levels
+    n_nois_levls: 61
+    # version of template feature
+    tpl_mode: v1
+    #da_bins
+    da_bins:
+      - 37
+      - 25
+      - 25
+      - 25
+
+  # === RCSB-PDB-28k ===
+  pdb28k:
+    # Root directory path
+    root_dir: /data1/protein/zyf/rcsb/
+    # Directory name to FASTA files
+    fas_dname: /data1/protein/zyf/rcsb/fasta.files
+    # Directory name to native PDB files
+    pdb_dname: /data1/protein/zyf/rcsb/pdb.files.native
+    # Directory name to HDF5 files (sequence + 3D coordinates)
+    hdf_dname: /data1/protein/zyf/rcsb/hdf5.files.fa
+    # Directory name to A3M files (homologous sequences)
+    a3m_dname: /data1/protein/zyf/rcsb/a3m.files.uc,/data1/protein/zyf/rcsb/a3m.files.uniref90,/data1/protein/zyf/rcsb/a3m.files.bfd
+    # Directory name to TPL files (structural templates)
+    tpl_dname: /data1/protein/zyf/rcsb/tpl.files
+    # Directory name to NPZ files (pre-computed intermediate features)
+    npz_dname: NOT_PROVIDED
+    # Directory name to NPZ files (GT-labels for inter-residue distance/orientation)
+    lbl_dname: /data1/protein/zyf/rcsb/npz.files.da_labl
+    # File name to protein IDs in the training subset
+    pid_fname_trn: /data1/protein/zyf/rcsb/chain_ids_1024.txt
+    # File name to protein IDs in the validation subset
+    pid_fname_val: /data1/protein/zyf/rcsb/chain_ids_val.txt
+    # File name to protein IDs in the test subset
+    pid_fname_tst: /data1/protein/zyf/rcsb/chain_ids_tst.txt
+    #
+    highres_fpath: /data1/protein/zyf/rcsb/hr_pdb_ids.txt
+
+  # === trrosetta dataset ===
+  trrosetta:
+    # Directory name to FASTA files
+    fas_dname: /data1/protein/zyf/trrosetta/fas
+    # Directory name to native PDB files
+    pdb_dname: /data1/protein/zyf/trrosetta/pdb
+    # Directory name to HDF5 files (sequence + 3D coordinates)
+    hdf_dname: /data1/protein/zyf/trrosetta/hdf5.files.fa
+    # Directory name to A3M files (homologous sequences)
+    a3m_dname: /data1/protein/zyf/trrosetta/a3m,/data1/protein/zyf/trrosetta/files.msa.uniclust_hits,/data1/protein/zyf/trrosetta/files.msa.uniref90_hits
+    # Directory name to TPL files (structural templates)
+    tpl_dname: /data1/protein/zyf/trrosetta/files.tpl
+    # Directory name to NPZ files (pre-computed intermediate features)
+    npz_dname: NOT_PROVIDED
+    # Directory name to NPZ files (GT-labels for inter-residue distance/orientation)
+    lbl_dname: /data1/protein/zyf/trrosetta/npz.files.da_labl
+    # File name to protein IDs (fast evaluation - 92 domains)
+    pid_fname: /data1/protein/zyf/trrosetta/prot_ids.txt
+    #
+    highres_fpath: /data1/protein/zyf/trrosetta/hr_pdb_ids.txt
+
+  # === CASP14 ===
+  casp14:
+    # Directory name to FASTA files
+    fas_dname: /data1/protein/zyf/casp14/fasta.files
+    # Directory name to native PDB files
+    pdb_dname: /data1/protein/zyf/casp14/pdb.files.native
+    # Directory name to HDF5 files (sequence + 3D coordinates)
+    hdf_dname: /data1/protein/zyf/casp14/hdf5.files.fa
+    # Directory name to A3M files (homologous sequences)
+    a3m_dname: /data1/protein/zyf/casp14/RoseTTAFold.casp14.domain.a3m
+    # Directory name to TPL files (structural templates)
+    tpl_dname: /data1/protein/zyf/casp14/tpl.files
+    # Directory name to NPZ files (pre-computed intermediate features)
+    npz_dname: NOT_PROVIDED
+    # Directory name to NPZ files (GT-labels for inter-residue distance/orientation)
+    lbl_dname: /data1/protein/zyf/casp14/npz.files.da_labl
+    # File name to protein IDs (fast evaluation - 92 domains)
+    pid_fname: /data1/protein/zyf/casp14/domains_overlap.txt
+    #
+    highres_fpath: NOT_PROVIDED
+
+  # === CAMEO5M ===
+  cameo:
+    # Root directory path
+    root_dir: /data1/protein/zyf/cameo3m-seq
+    # Directory name to FASTA files
+    fas_dname: /data1/protein/zyf/cameo3m-seq/20210710-20211002.targets.fasta
+    # Directory name to native PDB files
+    pdb_dname: /data1/protein/zyf/cameo3m-seq/20210710-20211002.targets.pdb
+    # Directory name to HDF5 files (sequence + 3D coordinates)
+    hdf_dname: /data1/protein/zyf/cameo3m-seq/hdf5.files.fa
+    # Directory name to A3M files (homologous sequences)
+    a3m_dname: /data1/protein/zyf/cameo3m-seq/20210710-20211002.targets.rosa3m
+    # Directory name to TPL files (structural templates)
+    tpl_dname: /data1/protein/zyf/cameo3m-seq/20210710-20211002.targets.tpl
+    # Directory name to NPZ files (pre-computed intermediate features)
+    npz_dname: NOT_PROVIDED
+    # Directory name to NPZ files (GT-labels for inter-residue distance/orientation)
+    lbl_dname: /data1/protein/zyf/cameo3m-seq/npz.files.da_labl
+    # File name to protein IDs (fast evaluation - 92 domains)
+    pid_fname: /data1/protein/zyf/cameo3m-seq/20210710-20211002.targets.svr98.ids.txt
+    #
+    highres_fpath: NOT_PROVIDED
+
+  # === AF2 360k Decoys ===
+  semi:
+    # Root directory path
+    root_dir: /MSA-Trans-DATA/part1/
+    # Directory name to FASTA files
+    fas_dname: /MSA-Trans-DATA/part1/msa_800k_part1.fas
+    # Directory name to native PDB files
+    pdb_dname: /MSA-Trans-DATA/part1/files.af2.model_1.pdb
+    # Directory name to HDF5 files (sequence + 3D coordinates)
+    hdf_dname: /MSA-Trans-DATA/part1/hdf5.files.fa
+    # Directory name to A3M files (homologous sequences)
+    a3m_dname: /MSA-Trans-DATA/part1/files.msa.uc30,/MSA-Trans-DATA/part1/files.msa.features
+    # Directory name to TPL files (structural templates)
+    tpl_dname: /MSA-Trans-DATA/part1/files.tpl
+    # Directory name to NPZ files (pre-computed intermediate features)
+    npz_dname: NOT_PROVIDED
+    # Directory name to NPZ files (GT-labels for inter-residue distance/orientation)
+    lbl_dname: /MSA-Trans-DATA/part1/npz.files.da_labl
+    # File name to protein IDs (fast evaluation - 92 domains)
+    pid_fname: /MSA-Trans-DATA/part1/txt/msa_800k_part1_depth64_ids.txt
+    #
+    highres_fpath: NOT_PROVIDED
+
+# === Misc. ===
+misc:
+  # Verbose level (choices: 'DEBUG' / 'INFO' / 'WARNING' / 'ERROR')
+  verb_levl: INFO

@@ -1,0 +1,21 @@
+# === File Paths ===
+
+# Directory path to PDB files
+fas_dpath: /mnt/exDisk/Datasets/RoseTTAFold/RCSB-PDB-1k/fasta.files
+# Directory path to native PDB files
+pdb_dpath: /mnt/exDisk/Datasets/RoseTTAFold/RCSB-PDB-1k/pdb.files.native
+# Directory path to HDF5 files
+hdf_dpath: /mnt/exDisk/Datasets/RoseTTAFold/RCSB-PDB-1k/hdf5.files
+# Directory path to MSA-derived inter-residue distance/orientation predictions
+npz_dpath: /mnt/exDisk/Datasets/RoseTTAFold/RCSB-PDB-1k/npz.files
+# Path to chain IDs in the training subset
+cid_fpath_trn: /mnt/exDisk/Datasets/RoseTTAFold/RCSB-PDB-1k/chain_ids_trn.txt
+# Path to chain IDs in the validation subset
+cid_fpath_val: /mnt/exDisk/Datasets/RoseTTAFold/RCSB-PDB-1k/chain_ids_val.txt
+# Path to chain IDs in the testing subset
+cid_fpath_tst: /mnt/exDisk/Datasets/RoseTTAFold/RCSB-PDB-1k/chain_ids_tst.txt
+
+# === Miscellaneous ===
+
+# Verbose level (choices: 'DEBUG' / 'INFO' / 'WARNING' / 'ERROR')
+verbose_level: INFO

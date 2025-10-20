@@ -1,0 +1,89 @@
+activation: relu
+af2_smod:
+  detach_3d: false
+  enable: false
+  finalloss: true
+  freeze: false
+  g_recycle: 1
+  highres: false
+  n_dim_attn: 64
+  n_lyrs: 8
+  plddt: false
+  v2: true
+attention:
+  n_layer_shift_tokens: 1
+  proj_type: linear
+basic:
+  d_msa: 384
+  d_pair: 256
+  msa_depth_max: 128
+  msa_mask_prob: 0.15
+  n_head_msa: 12
+  n_head_pair: 8
+  n_layer_msa: 1
+  n_layer_pair: 1
+  n_module: 1
+  n_recycle: 3
+  r_ff: 4
+dist:
+  bins:
+  - 37
+  - 25
+  - 25
+  - 25
+  is_dist_head: true
+dropout:
+  TokenDropoutColumnwise: 0.0
+  TokenDropoutRowwise: 0.0
+  is_p_layer_drop: true
+  p_attn_drop: 0.0
+  p_drop: 0.0
+  p_layer_drop: 0.0
+fas_bert:
+  enable: false
+  local_dir: /facebook_esm_checkpoints
+initialization:
+  is_init_zero: false
+  is_rezero: false
+mlm:
+  is_lm_head: true
+modules:
+  extra_msa_stack:
+    d_msa: 25
+    dim: 128
+    enable: false
+    is_onehot: true
+    random: false
+    recycle: false
+  msa2msa_type: MAB
+  msa_emb:
+    d_msa: null
+    is_onehot: false
+  pair2msa_type: bias_fusion
+  pair2pair_type: PAB
+msa_bert:
+  msa_bert_config: null
+  pos_emb: true
+  skip_load_msa_bert: false
+normalization:
+  is_sandwich_norm: false
+  is_use_ln: true
+  pb_relax: false
+pos_emb:
+  is_peg: true
+  is_pos_emb: false
+  n_peg_block: 1
+  rpe_type: null
+pretrained:
+  n_module_grow: null
+  pretrained_path: null
+  pretrained_path_xfold: null
+templ:
+  af2: false
+  af2_p_drop: 0.25
+  d_t1d: 23
+  d_t2d: 1
+  d_templ: 64
+  tpl_mode: v1
+  use_templ: true
+use_checkpoint: true
