@@ -13,6 +13,12 @@ $ cd Z-Fold
 $ pip install .
 ```
 
+* The models (checkpoints) could be accessed through the following link:
+```
+https://gofile.me/7zo5Q/F3kz6torg
+```
+
+
 ## Usage
 
 Example: to run a trosetta-npz & pdb prediction of xfold_e2e model with command line
