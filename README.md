@@ -15,7 +15,7 @@ $ pip install .
 
 * The models (checkpoints) could be accessed through the following link:
 ```
-https://gofile.me/7zo5Q/F3kz6torg
+https://gofile.me/7zo5Q/QHXoVKyR1
 ```
 
 
